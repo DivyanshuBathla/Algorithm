@@ -18,6 +18,8 @@ void adjancedlist(vector<int> *v,int src,int des)
 Tc=O(V+E) for adjanced list and O(v^2) for adjanced list*/
 bool cycledetection(vector<int> *v,int s,int *vis)
 {
+    if(v[s].size()==0)
+    return false;
     queue<int> q;
     q.push(s);
     int parent[n]={-1};
@@ -48,6 +50,7 @@ bool iscycle(vector<int> *v,int s,int *vis)
     {
         if(vis[i]==0&&cycledetection(v,i,vis))
         return true;
+        i++;
     }
     return false;
 }
