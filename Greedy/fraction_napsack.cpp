@@ -72,7 +72,8 @@ int main()
     int bag;
     cout<<"Enter the bag capacity=";
     cin>>bag;
-    cout<<"Res="<<fracnap(item,bag);
-
+    float r=fracnap(item,bag);
+    cout<<"\n";
+cout<<"Res="<<r;
     return 0;
 }
